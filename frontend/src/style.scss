@@ -1,0 +1,388 @@
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+#root{
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: black;
+  text-decoration: none;
+
+}
+
+// Home 
+
+
+.container-is {
+  width: 200px;
+  height: 200px;
+  position: relative;
+margin-left: 15rem;
+  perspective: 2000px;
+
+}
+.cube {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 5s linear infinite ;
+ 
+}
+.cube div {
+  width: 196px;
+  height: 196px;
+  position: absolute;
+  opacity: 0.5;
+  margin: 0;
+  display:block;
+}
+.front {
+  background: grey;
+  transform: rotateX(0deg) translateZ(97px);
+}
+.back {
+  background: darkblue;
+  transform: rotateX(-180deg) translateZ(97px);
+}
+.left {
+  background: url();
+  background-size: contain;
+  transform: rotateY(-90deg) translateZ(97px);
+  overflow:hidden;
+}
+.left:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  margin-top: -30px;
+  margin-left: 20px;
+  transform: rotate(45deg);
+}
+.right {
+  background: white;
+  transform: rotateY(90deg) translateZ(97px);
+}
+.top {
+  background: grey;
+  transform: rotateX(90deg) translateZ(97px);
+}
+.bottom {
+  background: black;
+  transform: rotateX(-90deg) translateZ(97px);
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg) rotateX(45deg) 
+  }
+  to {
+    transform: rotateY(360deg) rotateX(45deg)  
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.is-home-image{
+  background-color: #006dbf;
+  min-height:100vh;
+
+}
+
+.is-big{
+  font-size: 5rem;
+}
+.is-carusel{
+  margin-top: 10rem;
+}
+
+.is-home-choice{
+  margin-left: 3rem;
+  margin-top: -7rem;
+}
+
+
+.button{
+  margin: 0rem .5rem;
+}
+
+#home-blog-img{
+  text-align: center;
+  width: 60%;
+  margin-top: 12rem;
+  margin-bottom: 10rem;
+}
+.is-info > a{
+  color: white;
+}
+.is-info > a:hover{
+  color: white;
+}
+
+
+.is-bright > a{
+  color: #006dbf;
+}
+.is-bright > a:hover{
+  color: #006dbf;
+}
+
+.section-home{
+  font-size: 1rem;
+}
+
+
+// Login
+
+.card-content{
+  background-color: rgb(21, 32, 43);
+margin-top: 7rem;
+min-width: 25rem;
+max-width: 25rem;
+
+}
+
+.card-content{
+  border-radius: 20px;
+}
+.card-content{
+  border-radius: 20px;
+}
+
+.card{
+  background-color: transparent;
+}
+
+#content-login{
+  background-color: rgb(89, 94, 99);
+  color: white;
+  height: 100vh;
+
+
+}
+
+
+#content-login > .label{
+  color: white;
+}
+
+.input, .textarea, .select select{
+  background-color: rgba(89, 94, 99, 0.616);
+  border: none;
+  border-bottom: 2px solid #006dbf;
+  color: white;
+}
+
+
+// Main
+
+
+.Post-New-Main{
+
+  
+}
+
+.all-posts{
+  margin-top: 14rem;
+  
+}
+
+.is-chat{
+  background-color: transparent;
+  margin: 2rem;
+border-radius: 2rem;
+  max-width: 50rem;
+  min-width: 50rem;
+}
+
+.card-content-blog{
+  background-color: transparent;
+  margin: 2rem;
+
+  max-width: 30rem;
+  min-width: 30rem;
+}
+
+
+ /* The sidebar menu */
+ .sidenav {
+   border-right: 2px solid grey;
+
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 17rem; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: transparent; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #818181;
+  font-weight: 500;
+  display: block;
+  text-align: justify;
+}
+
+.sidenav a:first-child {
+  margin-top: 4rem;
+}
+
+
+
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #006dbf;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Flash message 
+
+.flashMessage{
+  text-align: center;
+}
+
+// Links FAS
+
+.fas{
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
+
+// NEW POST
+// Form 
+
+
+
+.is-right{
+  margin-left: 20rem;
+}
+
+.is-wider{
+  width: 30rem;
+
+  margin-top: 1rem;
+
+  background-color: transparent;
+border-radius: 0;
+// box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+position: fixed;
+}
+
+.is-content{
+  height: 4em;
+  text-align: left;
+}
+
+.is-post{
+  background-color: transparent;
+  color: black;
+border: 1px solid #006dbf;
+}
+
+.is-title-post{
+  font-weight: 600;
+}
+
+
+
+// News
+
+
+.NewsFeed{
+  margin-top: 7rem;
+  margin-left: 2rem;
+  margin-right: 4rem;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 7rem;
+}
+
+
+// Chats
+
+.is-chat{
+  background-color: transparent;
+  margin: 2rem;
+border-radius: 2rem;
+  max-width: 50rem;
+  min-width: 50rem;
+}
+
+.is-down{
+  position: absolute;
+  margin-top: 7rem;
+  margin-left: 16rem;
+}
+
+
+
+// User
+
+.is-users-posts{
+  margin-top: 1rem;
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Project-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -p",
+    "serve:backend": "python manage.py runserver 4000",
+    "serve:frontend": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "axios": "^0.19.1",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "bulma": "^0.8.0",
+    "css-loader": "^3.4.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-sass": "^4.13.0",
+    "query-string": "^6.9.0",
+    "react": "^16.12.0",
+    "react-animated-css": "^1.2.1",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soniacweb/project4.git"
+  },
+  "author": "Ustin Vaskin <ustin.vaskin2011@gmail.com>",
+  "description": "Social Network",
+  "bugs": {
+    "url": "https://github.com/soniacweb/project4/issues"
+  },
+  "homepage": "https://github.com/soniacweb/project4#readme"
+}

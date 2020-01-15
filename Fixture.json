@@ -1,0 +1,111 @@
+[
+{
+  "model": "cats.tag",
+  "pk": 1,
+  "fields": {
+    "name": "fluffy"
+  }
+},
+{
+  "model": "cats.owner",
+  "pk": 1,
+  "fields": {
+    "name": "Nick",
+    "age": 30
+  }
+},
+{
+  "model": "cats.cat",
+  "pk": 1,
+  "fields": {
+    "name": "Malcolm",
+    "breed": "Persian",
+    "image": "www.image.com",
+    "owner": 1,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "cats.cat",
+  "pk": 2,
+  "fields": {
+    "name": "Tim",
+    "breed": "Cool-cat",
+    "image": "www.image.com",
+    "owner": 1,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "cats.cat",
+  "pk": 3,
+  "fields": {
+    "name": "Tammy",
+    "breed": "Siamese",
+    "image": "www.image.com",
+    "owner": 1,
+    "tags": []
+  }
+},
+{
+  "model": "cats.cat",
+  "pk": 4,
+  "fields": {
+    "name": "Catty",
+    "breed": "Catness",
+    "image": "www.image.com",
+    "owner": 1,
+    "tags": []
+  }
+},
+{
+  "model": "cats.cat",
+  "pk": 5,
+  "fields": {
+    "name": "Blah",
+    "breed": "Catness",
+    "image": "www.image.com",
+    "owner": 1,
+    "tags": []
+  }
+},
+{
+  "model": "cats.cat",
+  "pk": 6,
+  "fields": {
+    "name": "Wisecat",
+    "breed": "Catness",
+    "image": "www.image.com",
+    "owner": 1,
+    "tags": []
+  }
+},
+{
+  "model": "cats.cat",
+  "pk": 7,
+  "fields": {
+    "name": "NIcks cat",
+    "breed": "NIcks",
+    "image": "www.blah.com",
+    "owner": 1,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "cats.cat",
+  "pk": 9,
+  "fields": {
+    "name": "NIcks actual favourite cat",
+    "breed": "NIcks",
+    "image": "www.blah.com",
+    "owner": 1,
+    "tags": []
+  }
+}
+]
