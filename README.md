@@ -12,7 +12,7 @@ https://qbloggen.herokuapp.com/#/
 # Start: 
 # Installation
     Clone or download the repo
-    Run 'pipen shell' in the CLI
+    Run 'pipenv shell' in the CLI
     Run 'pip3 install django'
     Run 'yarn serve:backend ', 'arn serve:frontend' in the CLI
     
