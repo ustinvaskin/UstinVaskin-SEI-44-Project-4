@@ -14,7 +14,7 @@ https://qbloggen.herokuapp.com/#/
     Clone or download the repo
     Run 'pipenv shell' in the CLI
     Run 'pip3 install django'
-    Run 'yarn serve:backend ', 'arn serve:frontend' in the CLI
+    Run 'yarn serve:backend ', 'yarn serve:frontend' in the CLI
     
 ---
 ## Timeframe
