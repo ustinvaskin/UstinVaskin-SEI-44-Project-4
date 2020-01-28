@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-// import Promise from 'bluebird'
-
 import Auth from '../../lib/Auth'
-import Loading from '../common/Loading'
 import Card from '../posts/Card'
-
 import SideNav from '../common/SideBarNav'
+
 class Show extends React.Component {
   constructor(props) {
     super(props)
@@ -20,7 +17,6 @@ class Show extends React.Component {
     this.handleDelete = this.handleDelete.bind(this)
   }
 
-
   canModify() {
     return Auth.isAuthenticated() && Auth.getPayload().sub === this.state.user.id
   }
@@ -32,9 +28,6 @@ class Show extends React.Component {
       .then(res => this.setState({ user: res.data }))
   }
 
-
-
-
   // Handle delate user
   handleDelete() {
     const token = Auth.getToken()
@@ -44,10 +37,6 @@ class Show extends React.Component {
       .then(() => Auth.removeToken())
       .then(() => this.props.history.push('/home'))
   }
-
-
-
-
   // Handle Cahneg 
   handleChange(e) {
     const data = { ...this.state.data, [e.target.name]: e.target.value }
@@ -74,7 +63,7 @@ class Show extends React.Component {
                 <div className="media-right">
                   {!this.canModify() &&
                     <div>
-                      <Link to={`/users/$${this.props.match.params.id}/edit`} className="button">Add to Friends</Link>
+                      <Link to={'#'} className="button">Add to Friends</Link>
                     </div>
                   }
                 </div>
@@ -95,11 +84,8 @@ class Show extends React.Component {
               </div>
               <div className="media-content">
                 <p className="title is-4">{this.state.user.username}</p>
-
-
                 <p className="subtitle is-6">{this.state.user.email}</p>
               </div>
-
               <br />
               <div className="column is-four-fifths has-text-justified">
                 <p className="title is-6">{this.state.user.bio}</p>
@@ -126,15 +112,9 @@ class Show extends React.Component {
               )}
           </div>
         </div >
-
         <div className="column">
         </div>
       </div >
-
-
-
-
-
     )
   }
 }

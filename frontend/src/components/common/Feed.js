@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-// import Promise from 'bluebird'
-
 import Auth from '../../lib/Auth'
 
 
@@ -16,9 +14,7 @@ class Feed extends React.Component {
       data: '',
       comments: []
     }
-
     this.handleComment = this.handleComment.bind(this)
-
     this.handleDeleteComments = this.handleDeleteComments.bind(this)
   }
 
@@ -69,7 +65,7 @@ class Feed extends React.Component {
     return (
       <div className="show-content-comments subheading-show" >
         Comments
-      < article className="media" >
+        < article className="media" >
           <figure className="media-left">
             <p className="image is-64x64">
               {/* <img src="https://profile.actionsprout.com/default.jpeg" /> */}

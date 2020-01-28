@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-// import Promise from 'bluebird'
-import Card from './CardSimular'
 import Auth from '../../lib/Auth'
-import Loading from '../common/Loading'
-
-
 import SideNav from '../common/SideBarNav'
+
+
 class Show extends React.Component {
   constructor(props) {
     super(props)
@@ -27,21 +24,16 @@ class Show extends React.Component {
     this.handleDelete = this.handleDelete.bind(this)
     this.handleDeleteComments = this.handleDeleteComments.bind(this)
   }
-
-
   // When users id equals to one who created post you can
   canModify() {
     return Auth.isAuthenticated() && Auth.getPayload().sub === this.state.posts.owner.id
   }
-
   // get spesific post
   componentDidMount() {
     const token = Auth.getToken()
     axios.get(`/api/posts/${this.props.match.params.id}`, { headers: { 'Authorization': `Bearer ${token}` } })
       .then(res => this.setState({ posts: res.data }))
   }
-
-
   // Handle delate post
   handleDelete() {
     const token = Auth.getToken()
@@ -50,15 +42,12 @@ class Show extends React.Component {
     })
       .then(() => this.props.history.push('/main'))
   }
-
-
   // Handle Cahneg 
   handleChange(e) {
     const data = { ...this.state.data, [e.target.name]: e.target.value }
     this.setState({ data })
     console.log(data)
   }
-
   // Handle deleat
   handleDeleteComments(e) {
     const token = Auth.getToken()
@@ -69,9 +58,6 @@ class Show extends React.Component {
     }
     window.location.reload()
   }
-
-
-
   // Handle Comment:
   handleComment(e) {
     e.preventDefault()
@@ -81,7 +67,6 @@ class Show extends React.Component {
     })
     window.location.reload()
   }
-
 
   render() {
     console.log(this.state.posts)
@@ -138,7 +123,6 @@ class Show extends React.Component {
                   <i className="far fa-comments"></i>
                   <span className="subtitle is-5"> {this.state.posts.comments.length}</span>
                 </div>
-
               </div>
               <article className="media">
                 <div className="media-content">
@@ -161,10 +145,8 @@ class Show extends React.Component {
                   <figure className="media-left">
                     <p className="image is-48x48">
                       <img className="is-rounded" src={comments.owner.profile_image} alt={comments.owner.username} />
-
                     </p>
                   </figure>
-
                   <div className="media-content">
                     <div className="content">
                       <p className="commentText strong">
@@ -195,23 +177,13 @@ class Show extends React.Component {
                 </article>
               )}
             </div>
-
-
-
-
-
-
-
-
           </div>
         </div >
         <div className="column">
         </div>
       </div >
-
-
-
     )
   }
 }
+
 export default Show

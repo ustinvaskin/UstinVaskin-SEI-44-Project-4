@@ -3,23 +3,16 @@ import axios from 'axios'
 import { withRouter } from 'react-router-dom'
 import Form from './Form'
 import Auth from '../../lib/Auth'
-
 import SideNav from '../common/SideBarNav'
 
-
 class NewPost extends React.Component {
-
-
   constructor() {
     super()
-
     this.state = {
       data: {},
       errors: {},
       articles: []
     }
-
-
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -31,18 +24,13 @@ class NewPost extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-
     const token = Auth.getToken()
-
     axios.post('/api/posts/', this.state.data, {
       headers: { 'Authorization': `Bearer ${token}` }
     })
       .then(() => console.log(token))
       .then(() => window.location.reload())
-    // .catch(err => this.setState({ errors: err.response.data.errors }))
-
   }
-
   render() {
     console.log(this.state)
     return (
@@ -51,9 +39,7 @@ class NewPost extends React.Component {
           <SideNav />
         </div>
         <div className="column">
-
           <div className="container">
-
             <div className="">
               <Form
                 handleChange={this.handleChange}
@@ -62,7 +48,6 @@ class NewPost extends React.Component {
                 errors={this.state.errors}
               />
             </div>
-
           </div>
         </div>
         <div className="column">

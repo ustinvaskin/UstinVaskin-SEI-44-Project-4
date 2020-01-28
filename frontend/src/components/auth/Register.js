@@ -1,25 +1,18 @@
 import React from 'react'
 import axios from 'axios'
-
-import Flash from '../../lib/Flash'
-
-import Auth from '../../lib/Auth'
-import { Animated } from 'react-animated-css'
+// import Flash from '../../lib/Flash'
+// import Auth from '../../lib/Auth'
+// import { Animated } from 'react-animated-css'
 import { Link } from 'react-router-dom'
-
-
 import Navbar from '../common/Navbar'
 
 class Register extends React.Component {
-
   constructor() {
     super()
-
     this.state = {
       data: {},
       errors: {}
     }
-
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -36,14 +29,11 @@ class Register extends React.Component {
       .catch(err => this.setState({ errors: err.response.data.errors }))
   }
 
-
   render() {
     console.log(this.state)
     return (
-
       <div className=" has-text-centered" id="content-login">
         <div className="columns is-centered is-login">
-
           <div className="card-content">
             <form>
               <div className="field">
@@ -67,7 +57,8 @@ class Register extends React.Component {
                     onChange={this.handleChange}
                   />
                 </div>
-                {this.state.errors.email && <div className="help is-danger">{this.state.errors.email}</div>}                      </div>
+                {this.state.errors.email && <div className="help is-danger">{this.state.errors.email}</div>}
+              </div>
               <div className="field">
                 <label className="label has-text-white">Password</label>
                 <div className="control">
@@ -107,14 +98,8 @@ class Register extends React.Component {
             </form>
           </div>
         </div>
-
         <Navbar />
       </div>
-
-
-
-
-
     )
   }
 }

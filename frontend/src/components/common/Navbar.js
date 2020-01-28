@@ -46,21 +46,11 @@ class Navbar extends React.Component {
             <Link to="/" className="navbar-item"><i className="fas fa-home"></i>Home</Link>
             <Link to="/main" className="navbar-item"><i className="fas fa-rss"></i>Feed</Link>
             {Auth.isAuthenticated() && <Link to={`/users/${Auth.getPayload().sub}`} className="navbar-item"><i className="fas fa-user-alt"></i>Profile</Link>}
-
-            {/* <Link to="/stories" className="navbar-item">Story collection</Link>
-            
-            {Auth.isAuthenticated() && <Link to="/books/new" className="navbar-item">Add a new book</Link>} */}
             {Auth.isAuthenticated() && <Link to="/chats/" className="navbar-item"><i className="fas fa-comments"></i>Chats</Link>}
-
-
-            {Auth.isAuthenticated() && <Link to="#" className="navbar-item"><i class="fas fa-grip-lines-vertical"></i><i class="fas fa-grip-lines-vertical"></i><i class="fas fa-grip-lines-vertical"></i>Coming Soon:</Link>}
-
+            {Auth.isAuthenticated() && <Link to="#" className="navbar-item"><i className="fas fa-grip-lines-vertical"></i><i className="fas fa-grip-lines-vertical"></i><i className="fas fa-grip-lines-vertical"></i>Coming Soon:</Link>}
             {Auth.isAuthenticated() && <Link to="#" className="navbar-item"><i className="fas fa-users"></i>Friends</Link>}
-
             {Auth.isAuthenticated() && <Link to="#" className="navbar-item"><i className="fas fa-bookmark"></i>Bookmarks</Link>}
-          </div>
-          <div className="navbar-end">
-            {/* {Auth.isAuthenticated() && <Link to={`/users/${Auth.getPayload().sub}`} className="navbar-item"><i className="fas fa-user-alt"></i>Profile</Link>} */}
+          </div><div className="navbar-end">
             {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item"><i className="fas fa-registered"></i>Register</Link>}
             {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item"><i className="fas fa-sign-out-alt"></i>Login</Link>}
             {Auth.isAuthenticated() && <a className="navbar-item" onClick={this.logout}><i className="fas fa-sign-out-alt"></i>Logout</a>}

@@ -33,26 +33,16 @@ class SideNav extends React.Component {
         <br />
         <br />
         {Auth.isAuthenticated() && <Link to={`/users/${Auth.getPayload().sub}`} className="navbar-item"><i className="fas fa-user-alt"></i>Profile</Link>}
-
-
-
         {Auth.isAuthenticated() && <Link to="/chats/" className="navbar-item"><i className="fas fa-comments"></i>Chats</Link>}
         <br />
         <br />
         {Auth.isAuthenticated() && <Link to="#" className="navbar-item"><i className="fas fa-users"></i>Friends<p className="subtitle is-6 has-text-centered">Coming Soon</p></Link>}
-
         {Auth.isAuthenticated() && <Link to="#" className="navbar-item"><i className="fas fa-bookmark"></i>Bookmarks<p className="subtitle is-6 has-text-centered">Coming Soon</p></Link>}
         <br />
         <br />
         <Link to="/" className="navbar-item"><i className="fas fa-home"></i>Home</Link>
-
         <br />
         <br />
-        {/* {Auth.isAuthenticated() && <Link to="/posts/new" className="navbar-item" >Post</Link>} */}
-
-        {/* <iframe src="https://www.powr.io/plugins/music-player/view/22635509" width="100%;" height="265px" frameBorder="0"></iframe> */}
-
-
         <div>
         </div>
         {!Auth.isAuthenticated() && <Link to="/register" className=" button is-bright is-rounded "><i className="fas fa-registered"></i>Register</Link>}
@@ -62,7 +52,6 @@ class SideNav extends React.Component {
         {!Auth.isAuthenticated() && <Link to="/login" className="button is-bright is-rounded "><i className="fas fa-sign-in-alt"></i>Login</Link>}
         <br />
         <Link to="/" className="title is-3 has-text-centered has-text-danger" data-config-id="header"><i className="fab fa-quinscape"></i>GEN</Link>
-
       </div >
     )
   }

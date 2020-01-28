@@ -1,9 +1,8 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 
-const Form = ({ handleChange, handleSubmit, data, errors }) => {
+const Form = ({ handleChange, handleSubmit, data }) => {
   return (
-
     <div className="container has-text-centered">
       <div className="columns is-centered ">
         <div className="column is-5 is-4-desktop">

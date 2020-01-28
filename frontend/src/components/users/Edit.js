@@ -1,13 +1,10 @@
 import React from 'react'
 import axios from 'axios'
-
 import Auth from '../../lib/Auth'
 
 class Edit extends React.Component {
-
   constructor() {
     super()
-
     this.state = {
       data: [],
       errors: {}
@@ -18,7 +15,6 @@ class Edit extends React.Component {
   }
   componentDidMount() {
     const token = Auth.getToken()
-
     axios.get(`/api/profile-all/${this.props.match.params.id}`, {
       headers: { 'Authorization': `Bearer ${token}` }
     })
@@ -33,9 +29,7 @@ class Edit extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-
     const token = Auth.getToken()
-
     axios.put(`/api/profile-all/${this.props.match.params.id}/`, this.state.data, {
       headers: { 'Authorization': `Bearer ${token}` }
     })
@@ -47,11 +41,9 @@ class Edit extends React.Component {
     return (
       <div className="" id="content-login">
         <div className="columns is-centered is-login">
-
           <div className="card-content">
             <div>
               <h1 className="title is-3 has-text-white has-text-centered">Settings</h1>
-
             </div>
             <form onSubmit={this.handleSubmit}>
               <div className="field">
@@ -104,9 +96,6 @@ class Edit extends React.Component {
                 />
               </div>
               {this.state.errors.bio && <div className="help is-danger">{this.state.errors.bio}</div>}
-
-
-
               <div className="field">
                 <label className="label has-text-white ">Password</label>
                 <div className="control">
@@ -115,15 +104,10 @@ class Edit extends React.Component {
                     name="password"
                     placeholder="eg: ••••••••"
                     onChange={this.handleChange}
-
                   />
                 </div>
                 {this.state.errors.password && <div className="help is-danger">{this.state.errors.password}</div>}
               </div>
-
-
-
-
               <div className="field">
                 <label className="label has-text-white ">Password</label>
                 <div className="control">
@@ -132,25 +116,15 @@ class Edit extends React.Component {
                     name="password_confirmation"
                     placeholder="eg: ••••••••"
                     onChange={this.handleChange}
-
                   />
                 </div>
                 {this.state.errors.password_confirmation && <div className="help is-danger">{this.state.errors.password_confirmation}</div>}
               </div>
-
-
-
-
-
-
-
-
               <button type="submit" className="button is-black">Submit</button>
             </form>
           </div>
         </div>
       </div>
-
     )
   }
 }

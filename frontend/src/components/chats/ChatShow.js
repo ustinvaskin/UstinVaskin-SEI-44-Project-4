@@ -4,7 +4,6 @@ import axios from 'axios'
 // import Promise from 'bluebird'
 import Auth from '../../lib/Auth'
 
-
 import SideNav from '../common/SideBarNav'
 class Show extends React.Component {
   constructor(props) {
@@ -48,7 +47,6 @@ class Show extends React.Component {
     })
       .then(() => this.props.history.push('/chats'))
   }
-
 
   // Handle Cahneg 
   handleChange(e) {
@@ -112,12 +110,6 @@ class Show extends React.Component {
                 </div>
               </div>
               <div className="card-content-blog">
-                {/* <div className="media"> */}
-                {/* <div className="media-left"> */}
-                {/* <figure className="image is-48x48">
-            <img className="is-rounded" src={owner.profile_image} alt={owner.username} />
-          </figure> */}
-
                 <div className="media-content">
                   <div>
                     <span className="title is-5 has-text-grey">Chat room:</span> <span className="title is-4">{this.state.chats.content}</span>
@@ -125,11 +117,9 @@ class Show extends React.Component {
                     <p className="subtitle is-6 has-text-grey"> Created on: <time dateTime="2016-1-1">{this.state.chats.created_at}</time>
                     </p>
                   </div>
-
                 </div><br />
-                <i class="fas fa-envelope fa-2x	"></i>
+                <i className="fas fa-envelope fa-2x	"></i>
                 <span className="title is-4 has-text-weight-semibold">{this.state.chats.messages.length}</span>
-
               </div >
               <article className="media">
                 <div className="media-content">
@@ -152,10 +142,8 @@ class Show extends React.Component {
                   <figure className="media-left">
                     <p className="image is-48x48">
                       <img className="is-rounded" src={messages.owner.profile_image} alt={messages.owner.username} />
-
                     </p>
                   </figure>
-
                   <div className="media-content">
                     <div className="content">
                       <p className="commentText strong">
@@ -166,10 +154,8 @@ class Show extends React.Component {
                         {messages.text}
                       </p>
                     </div>
-
                   </div>
                   <div className="media-right">
-
                     <button id={messages._id} value={messages.owner._id} className="delete" onClick={this.handleDeletemessages}></button>
                   </div>
                 </article>
@@ -180,10 +166,8 @@ class Show extends React.Component {
         <div className="column">
         </div>
       </div >
-
-
-
     )
   }
 }
+
 export default Show

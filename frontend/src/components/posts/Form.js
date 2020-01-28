@@ -1,9 +1,8 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 
-const Form = ({ handleChange, handleSubmit, data, errors }) => {
+const Form = ({ handleChange, handleSubmit, data }) => {
   return (
-
     <div className="container has-text-centered">
       <div className="columns is-centered ">
         <div className="card-content is-wider">
@@ -26,7 +25,6 @@ const Form = ({ handleChange, handleSubmit, data, errors }) => {
                 <button className="button is-info is-rounded">Post</button>
               </div>
             </form>
-
           </div>
         </div>
       </div>

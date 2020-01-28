@@ -3,12 +3,8 @@ import axios from 'axios'
 import { withRouter } from 'react-router-dom'
 import Form from './Form'
 import Auth from '../../lib/Auth'
-
 import SideNav from '../common/SideBarNav'
-
-
 class NewChat extends React.Component {
-
 
   constructor(props) {
     super(props)
@@ -18,8 +14,6 @@ class NewChat extends React.Component {
       errors: {},
       articles: []
     }
-
-
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -31,9 +25,7 @@ class NewChat extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-
     const token = Auth.getToken()
-
     axios.post('/api/chats/', this.state.data, {
       headers: { 'Authorization': `Bearer ${token}` }
 
@@ -42,9 +34,6 @@ class NewChat extends React.Component {
       .then(() => axios.get(`/api/profile-all/${this.props.match.params.id}/`, { headers: { 'Authorization': `Bearer ${token}` } })
         .then(res => this.setState({ article: res.data }))
       )
-
-    // .catch(err => this.setState({ errors: err.response.data.errors }))
-
   }
 
   render() {
@@ -55,9 +44,7 @@ class NewChat extends React.Component {
           <SideNav />
         </div>
         <div className="column">
-
           <div className="container">
-
             <div className="">
               <Form
                 handleChange={this.handleChange}
@@ -66,7 +53,6 @@ class NewChat extends React.Component {
                 errors={this.state.errors}
               />
             </div>
-
           </div>
         </div>
         <div className="column">

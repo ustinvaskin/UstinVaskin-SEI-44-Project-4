@@ -1,8 +1,5 @@
 import React from 'react'
-
 import { Link } from 'react-router-dom'
-
-// import Likes from '../common/Likes'
 
 const Card = ({ owner, created_at, comments, content, id }) => {
   return (
@@ -25,12 +22,8 @@ const Card = ({ owner, created_at, comments, content, id }) => {
         <p className="subtitile is-4">{content}</p>
         <div>
           <i className="far fa-comments"></i>
-          <span className="subtitile is-5 has-text-weight-semibold	">     {comments.length}</span>
+          <span className="subtitile is-5 has-text-weight-semibold	">{comments.length}</span>
         </div>
-
-
-
-        {/* <Likes /> */}
       </div>
     </div>
   )

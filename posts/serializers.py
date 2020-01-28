@@ -6,36 +6,27 @@ from django.contrib.auth import get_user_model
 from .models import Post, Comment, Category
 User = get_user_model()  # invoking that get user model function
 
-
 # This user serializer is used to populate a nested owner on a post or comment
 class UserSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = User
         fields = ('id', 'username', 'profile_image')
 
-
 # For now just making a serializer for populated cateogies. This app doesn't have a route for creating categories so this should be all we need
 class CategorySerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Category  # setting up the Meta class with its fields as per normal
         fields = ('id', 'name')
 
-
 # This comment serializer does the same for comments on a post, serializes and populates them, if we didnt do tbhis we would just see a list of comment IDs returned on a post, instead of the full objects in a list.
 class CommentSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Comment
         fields = ('id', 'text', 'owner', 'post')
 
-
 # We use this on comment population to show the owner as a seraoilized nested field. note how this is inherting directly from the comment serializer above, and there for has all its meta class and feilds infromation automatically added
 class PopulatedCommentSerializer(CommentSerializer):
-
     owner = UserSerializer()  # use the owner serializer on the owner field of comments
-
 
 class PostSerializer(serializers.ModelSerializer):
 
@@ -47,10 +38,8 @@ class PostSerializer(serializers.ModelSerializer):
         extra_kwargs = {'comments': {'required': False},
                         'categories': {'required': False}}
 
-
 # again same idea as with the populated comment serilaizer, it inherits from Post Serializer and gets all the meta class and fields from that
 class PopulatedPostSerializer(PostSerializer):
-
     # any user on the post will be seralized and nested(like .populate() in mongoose)
     owner = UserSerializer()
     # same with comments, but in this case, we let the serializer know there will be a list of comments to seralize not just one.

@@ -1,11 +1,9 @@
 import React from 'react'
 import axios from 'axios'
-
 import Form from './FormEdit'
 import Auth from '../../lib/Auth'
-
-
 import SideNav from '../common/SideBarNav'
+
 class Edit extends React.Component {
 
   constructor() {
@@ -59,7 +57,6 @@ class Edit extends React.Component {
         <div className="column">
         </div>
       </div >
-
     )
   }
 }
