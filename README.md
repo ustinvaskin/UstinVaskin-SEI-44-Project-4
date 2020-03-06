@@ -3,7 +3,7 @@ Social Network
 
 
 
-How to startt 
+### How to startt 
 
 npm i 
 
@@ -28,7 +28,9 @@ pipenv shell
 npm run serve:frontend
 
 
+---
 
+Importatnt 
 -Do Filestack for upload img 
 -Do Bulma Models for editing settings icon in profile page 
 
@@ -48,6 +50,10 @@ Post Edit DONE [X]
 Change the way posts are showing from neewest to latest the same wiht chat rooms 
 
 Post Edit (when post have comments trows and error when trying to chage ) [!!!!!!!]
+
+Fix deleate comments 
+
+Fix login and register
 
 Add to users -> Chats and info from chats [!!!!!!!]
 
