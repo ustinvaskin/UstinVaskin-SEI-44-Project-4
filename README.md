@@ -2,6 +2,33 @@
 Social Network
 
 
+
+How to startt 
+
+npm i 
+
+Dont forget to add .babelrc
+with 
+
+```
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
+
+```
+
+
+pipenv shell 
+pipenv shell
+npm run serve:backend
+pipenv shell
+npm run serve:frontend
+
+
+
 -Do Filestack for upload img 
 -Do Bulma Models for editing settings icon in profile page 
 
