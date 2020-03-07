@@ -3,5 +3,5 @@ from django.contrib.auth.models import AbstractUser # This allows us to extend t
 
 class User(AbstractUser):
     email = models.CharField(max_length=50, unique=True) # overwriting the already exisiting email method, to make it required and need tobe unique
-    profile_image = models.CharField(max_length=500) # adding a profile image field
+    profile_image = models.CharField(max_length=500, blank=True) # adding a profile image field
     bio = models.CharField(max_length=250, blank=True)

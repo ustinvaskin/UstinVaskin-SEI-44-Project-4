@@ -69,7 +69,6 @@ Store users posts in user's posts proile page (in Profile page-> see all user's 
 
 
 
-
 Messanging 
 Create messge-> create post DONE [X]
 -> 
@@ -94,6 +93,8 @@ In show profile-> Show all posts that are related to a user [[!!!!!!!]]
 Users have chats 
   Chats have 2 users at least 
         users in chat have messages 
+
+        OR USE WEBSOKETS in DJANGO for messanging/ chat
 
 
 

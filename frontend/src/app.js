@@ -29,8 +29,9 @@ class App extends React.Component {
       <HashRouter>
         <FlashMessages />
         <Switch>
-          <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
+
+          <Route path="/register" component={Register} />
           <Route path="/main" component={Main} />
           <Route path="/chats/:id" component={ChatShow} />
           <Route path="/chats" component={MainChat} />

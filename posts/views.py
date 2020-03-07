@@ -112,15 +112,21 @@ class CommentDetailView(APIView):
 
     # The URL for this view is to 'api/posts/post_id/comments/comment_id', the comment id is passed as a named argument
     # we can ignore the comment and post id here,
-    def delete(self, request, comment_pk, **kwargs):
+    def delete(self, request, comment_pk, pk, **kwargs):
         # find the comment by its id
+        post = Post.objects.get(pk=pk)
         comment = Comment.objects.get(pk=comment_pk)
-        if comment.owner.id != request.user.id:  # check if the request came from the comment owner
+        if comment.owner.id != request.user.id and post.owner.id != request.user.id:  # check if the request came from the comment owner
             # if not the comment owner send back unauthorized
             return Response(status=HTTP_401_UNAUTHORIZED)
         comment.delete()  # delete it
         # send back no content response to the client
         return Response(status=HTTP_204_NO_CONTENT)
+
+
+     
+
+  
 
 
 class CategoryListView(APIView):  # Just going to make a list view for the categories. Not going to nest posts in them or anything like that and only going to make a GET method for this view. The main task it will really fulfill will be to populate dropdowns in the forms for category options
