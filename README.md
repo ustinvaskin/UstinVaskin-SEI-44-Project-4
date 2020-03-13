@@ -207,3 +207,15 @@ Implemet 3rdparty API Maybe News
 # Wendsday: 
 Fix bugs before showing 
 Mobile version- Responsive 
+
+
+---
+
+Решили 7 Марта 
+Регистарция и комментарий (разрещение)
+
+Проблема: 
+
+Показать иконку удалть только тем кто авторизован - создатель поста и/ или создатель комментаря 
+
+Модуль Edit в Profile 

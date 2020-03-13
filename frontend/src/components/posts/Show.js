@@ -51,18 +51,13 @@ class Show extends React.Component {
   // Handle deleat
   handleDeleteComments(e) {
     const token = Auth.getToken()
-    if (e.target.value == Auth.getPayload().sub) {
+    if (e.target.value === Auth.getPayload().sub) {
       axios.delete(`/api/posts/${this.props.match.params.id}/comments/${e.target.id}/`, {
         headers: { 'Authorization': `Bearer ${token}` }
       })
     }
     window.location.reload()
   }
-
-
-
-
-
   // Handle Comment:
   handleComment(e) {
     e.preventDefault()

@@ -61,4 +61,36 @@ class Edit extends React.Component {
   }
 }
 
+
+
+
+// class Edit extends React.Component {
+
+
+//   constructor() {
+//     super()
+
+//     this.state = {
+//       show: false
+//     };
+//     showModal = e => {
+//       this.setState({
+//         show: true
+//       });
+//     }
+
+//     render(){
+
+//       if (!this.props.show) {
+//         return null
+//       }
+//       return (
+//         <button onClick={e => {
+//           this.showModal()
+//         }}
+//         > show Modal </button>)
+//     }
+//   }
+// }
+
 export default Edit
